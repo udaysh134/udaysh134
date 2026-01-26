@@ -22,11 +22,11 @@ I build software and real-world products through structured projects, with a str
         <tr>
             <td align="center">
                 <br>
-                <img src="https://github-readme-stats.vercel.app/api?username=udaysh134&theme=github_dark&show_icons=true&include_all_commits=true&border_radius=15&border_color=ffffff" height="200"/>
+                <img src="https://github-readme-stats.vercel.app/api?username=udaysh134&theme=github_dark&show_icons=true&include_all_commits=true&border_radius=15&border_color=0D1117" height="200"/>
             </td>
             <td align="center">
                 <br>
-                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=udaysh134&theme=github_dark&layout=compact&langs_count=8&border_radius=15&border_color=ffffff" height="200"/>
+                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=udaysh134&theme=github_dark&layout=compact&langs_count=8&border_radius=15&border_color=0D1117" height="250"/>
             </td>
         </tr>
     </table>
