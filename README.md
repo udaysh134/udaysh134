@@ -2,7 +2,7 @@
 
 I build software and real-world products through structured projects, with a strong emphasis on hands-on execution across the development ecosystem.
 
-## 🎯 Current Focus
+## 🎯 Current focus
 - Systems-level programming and core computer science fundamentals
 - Building CLI tools and developer-focused utilities
 - Designing clean project structures and maintainable codebases
@@ -16,7 +16,7 @@ I build software and real-world products through structured projects, with a str
 ### Inactive / Archived
 - **[Xytius](https://github.com/udaysh134/xytius)** - A large-scale, multi-purpose Discord bot focused on automation, moderation, varied features and extensible system design.
 
-## 📊 Activity Snapshot
+## 📷 Activity snapshot
 <div align="center">
     <table>
         <tr>
@@ -33,7 +33,7 @@ I build software and real-world products through structured projects, with a str
 </div>
 
 <details>
-    <summary><strong>🧠 Work Style</strong></summary>
+    <summary><strong>🧠 Work style</strong></summary>
         <ul>
             <li>I prioritize clarity, structure, and long-term maintainability over quick fixes</li>
             <li>I prefer understanding systems deeply rather than relying on abstractions blindly</li>
@@ -48,6 +48,11 @@ I build software and real-world products through structured projects, with a str
         </ul>
 </details>
 
-## 💬 Connect
-| <img src="https://upload.wikimedia.org/wikipedia/fr/4/4f/Discord_Logo_sans_texte.svg" height="20"/> | [Discord](https://discord.com/udaysh134) | <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" height="20"/> | [LinkedIn](https://www.linkedin.com/in/udaysh134/) |
-|:---------------------------------------------------------------------------------------------------:|:------------------------------------------:| ------------------------------------------------------------------------------------------------------- | --------------------------------------------------- |
+## 🫴 Get in touch
+> Join the community or connect with me : 
+<a href="https://discord.com/udaysh134">
+    <img src="assets/Discord_Logo.svg" height="15"/>
+</a>
+<a href="https://www.linkedin.com/in/udaysh134/">
+    <img src="assets/LinkedIn_Logo.svg" height="15"/>
+</a>
