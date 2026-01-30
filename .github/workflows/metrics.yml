@@ -21,8 +21,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           user: udaysh134
-
-          template: repository
+          template: classic
           base: activity
 
           filename: assets/metrics/profile_metrics.svg
@@ -35,12 +34,11 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           user: udaysh134
-
-          base: ""
+          template: classic
           plugin_languages: yes
           plugin_languages_details: percentage
           plugin_languages_limit: 6
-          plugin_languages_threshold: 2%
+          # plugin_languages_threshold: 2%
           plugin_languages_colors: github
 
           filename: assets/metrics/language_metrics.svg
@@ -53,9 +51,10 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           user: udaysh134
-
-          base: ""
+          template: classic
           plugin_habits: yes
+          plugin_habits_from: 200
+          plugin_habits_days: 14
           plugin_habits_facts: yes
           plugin_habits_charts: yes
           plugin_habits_trim: yes
