@@ -45,7 +45,7 @@ I build software and real-world products through structured projects, with a str
 <hr>
 
 ### 🫴 Get in touch
-*Join the community or connect with me :* <a href="https://discord.com/udaysh134">
+*Join the community or connect with me :* <a href="https://discord.gg/pFjjb3wm">
     <img src="assets/Discord_Logo.svg" height="15"/>
 </a> <a href="https://www.linkedin.com/in/udaysh134/">
     <img src="assets/LinkedIn_Logo.svg" height="15"/>
