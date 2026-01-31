@@ -23,7 +23,7 @@ jobs:
 
           # Template & base
           template: classic
-          base: activity
+          base: activity, repositories
 
           # Safety
           plugins_errors_fatal: true
@@ -45,7 +45,7 @@ jobs:
 
           # Template & base
           template: classic
-          base: ""
+          base: activity, repositories
         
           # Languages plugin
           plugin_languages: yes
@@ -53,7 +53,7 @@ jobs:
           plugin_languages_analysis_timeout_repositories: 7.5
           plugin_languages_categories: markup, programming
           plugin_languages_colors: github
-          plugin_languages_details: bytes-size, percecntage
+          plugin_languages_details: bytes-size, percentage
           plugin_languages_limit: 8
           plugin_languages_recent_categories: markup, programming
           plugin_languages_recent_days: 14
@@ -81,7 +81,7 @@ jobs:
 
           # Template & base
           template: classic
-          base: ""
+          base: activity, repositories
 
           # Habits plugin
           plugin_habits: yes
