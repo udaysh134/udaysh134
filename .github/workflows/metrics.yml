@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  metadata: read
 
 jobs:
   # --------------------------------------------------
@@ -23,7 +24,7 @@ jobs:
 
           # Template & base
           template: classic
-          base: activity, metadata
+          base: activity
 
           # Safety
           plugins_errors_fatal: true
@@ -45,7 +46,7 @@ jobs:
 
           # Template & base
           template: classic
-          base: repositories, metadata
+          base:
         
           # Languages plugin
           plugin_languages: yes
@@ -81,7 +82,7 @@ jobs:
 
           # Template & base
           template: classic
-          base: metadata
+          base:
 
           # Habits plugin
           plugin_habits: yes
