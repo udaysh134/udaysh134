@@ -44,8 +44,8 @@ jobs:
           user: udaysh134
 
           # Template & base
-          template: classic
-          base:
+          # template: classic
+          # base:
         
           # Languages plugin
           plugin_languages: yes
@@ -80,8 +80,8 @@ jobs:
           user: udaysh134
 
           # Template & base
-          template: classic
-          base:
+          # template: classic
+          # base:
 
           # Habits plugin
           plugin_habits: yes
