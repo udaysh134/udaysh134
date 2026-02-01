@@ -25,9 +25,6 @@ jobs:
           template: classic
           base: activity
 
-          # Safety
-          plugins_errors_fatal: true
-
           # Output
           filename: assets/metrics/profile_metrics.svg
 
@@ -44,8 +41,8 @@ jobs:
           user: udaysh134
 
           # Template & base
-          # template: classic
-          # base:
+          template: repository
+          base: ""
         
           # Languages plugin
           plugin_languages: yes
@@ -60,9 +57,6 @@ jobs:
           plugin_languages_recent_load: 300
           plugin_languages_sections: most-used
           plugin_languages_threshold: 0
-
-          # Safety
-          plugins_errors_fatal: true
 
           # Output
           filename: assets/metrics/languages_metrics.svg
@@ -80,8 +74,8 @@ jobs:
           user: udaysh134
 
           # Template & base
-          # template: classic
-          # base:
+          template: classic
+          base: ""
 
           # Habits plugin
           plugin_habits: yes
@@ -92,9 +86,6 @@ jobs:
           plugin_habits_from: 50
           plugin_habits_languages_limit: 4
           plugin_habits_languages_threshold: 0%
-
-          # Safety
-          plugins_errors_fatal: false
 
           # Output
           filename: assets/metrics/habits_metrics.svg
