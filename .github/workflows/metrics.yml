@@ -23,7 +23,7 @@ jobs:
 
           # Template & base
           template: classic
-          base: repositories
+          base: ""
 
           plugin_wakatime: yes
           plugin_wakatime_token: ${{ secrets.WAKATIME_API_KEY }}
