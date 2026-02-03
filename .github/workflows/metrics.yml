@@ -10,12 +10,12 @@ permissions:
 
 jobs:
   # --------------------------------------------------
-  # 1. Profile Metrics
+  # 1. Wakatime Metrics
   # --------------------------------------------------
-  profile:
+  wakatime:
     runs-on: ubuntu-latest
     steps:
-      - name: Generate profile metrics
+      - name: Wakatime metrics
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -23,69 +23,17 @@ jobs:
 
           # Template & base
           template: classic
-          base: activity
+          base: repositories
+
+          plugin_wakatime: yes
+          plugin_wakatime_token: ${{ secrets.WAKATIME_API_KEY }}
+          plugin_wakatime_limit: 5
+          plugin_wakatime_days: 365
+          plugin_wakatime_languages_other: yes
+          plugin_wakatime_repositories_visibility: all
+          plugin_wakatime_sections: time, projects, projects-graphs, languages, languages-graphs, editors, os
+          # plugin_wakatime_url: https://wakatime.com
+          # plugin_wakatime_user: current
 
           # Output
-          filename: assets/metrics/profile_metrics.svg
-
-  # --------------------------------------------------
-  # 2. Language Metrics
-  # --------------------------------------------------
-  languages:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Generate language metrics
-        uses: lowlighter/metrics@latest
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          user: udaysh134
-
-          # Template & base
-          template: repository
-          base: ""
-        
-          # Languages plugin
-          plugin_languages: yes
-          plugin_languages_analysis_timeout: 15
-          plugin_languages_analysis_timeout_repositories: 7.5
-          plugin_languages_categories: markup, programming
-          plugin_languages_colors: github
-          plugin_languages_details: bytes-size, percentage
-          plugin_languages_limit: 8
-          plugin_languages_recent_categories: markup, programming
-          plugin_languages_recent_days: 14
-          plugin_languages_recent_load: 300
-          plugin_languages_sections: most-used
-          plugin_languages_threshold: 0
-
-          # Output
-          filename: assets/metrics/languages_metrics.svg
-
-  # --------------------------------------------------
-  # 3. Habits Metrics
-  # --------------------------------------------------
-  habits:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Generate habits metrics
-        uses: lowlighter/metrics@latest
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          user: udaysh134
-
-          # Template & base
-          template: classic
-          base: ""
-
-          # Habits plugin
-          plugin_habits: yes
-          plugin_habits_charts: yes
-          plugin_habits_charts_type: classic
-          plugin_habits_days: 14
-          plugin_habits_facts: yes
-          plugin_habits_from: 50
-          plugin_habits_languages_limit: 4
-          plugin_habits_languages_threshold: 0%
-
-          # Output
-          filename: assets/metrics/habits_metrics.svg
+          filename: assets/wakatime_metrics.svg
