@@ -17,12 +17,12 @@ I build software and real-world products through structured projects, with a str
     <table>
         <tr>
             <td align="center">
-                <img src="assets/metrics/profile_metrics.svg"/>
-                <!-- <img src="https://github-readme-stats.vercel.app/api?username=udaysh134&theme=github_dark&show_icons=true&border_radius=15&border_color=0D1117&hide=contribs"/> -->
+                <!-- <img src="assets/metrics/profile_metrics.svg"/> -->
+                <img src="https://github-readme-stats-omega-gold.vercel.app/api?username=udaysh134&theme=github_dark&show_icons=true&border_radius=15&border_color=0D1117&hide=contribs"/>
             </td>
             <td align="center">
-                <img src="assets/metrics/habits_metrics.svg"/>
-                <!-- <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=udaysh134&theme=github_dark&layout=compact&langs_count=8&border_radius=15&border_color=0D1117"/> -->
+                <!-- <img src="assets/metrics/habits_metrics.svg"/> -->
+                <img src="https://github-readme-stats-omega-gold.vercel.app/api/top-langs/?username=udaysh134&theme=github_dark&layout=compact&langs_count=8&border_radius=15&border_color=0D1117"/>
             </td>
         </tr>
         <tr>
