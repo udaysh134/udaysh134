@@ -17,15 +17,17 @@ I build software and real-world products through structured projects, with a str
     <table>
         <tr>
             <td align="center">
-                <img src="https://github-readme-stats-sfqnzohy5-uday-shuklas-projects.vercel.app/api?username=udaysh134&theme=github_dark&show_icons=true&border_radius=15&border_color=0D1117&hide=contribs&include_all_commits=true&count_private=true&cache_seconds=21600&v=1"/>
+                <img src="assets/metrics/profile_stats.svg"/>
+                <!-- <img src="https://github-readme-stats-sfqnzohy5-uday-shuklas-projects.vercel.app/api?username=udaysh134&theme=github_dark&show_icons=true&border_radius=15&border_color=0D1117&hide=contribs&include_all_commits=true&count_private=true"/> -->
             </td>
             <td align="center">
-                <img src="https://github-readme-stats-sfqnzohy5-uday-shuklas-projects.vercel.app/api/top-langs/?username=udaysh134&theme=github_dark&layout=compact&langs_count=8&border_radius=15&border_color=0D1117&count_private=true&cache_seconds=21600&v=1"/>
+                <img src="assets/metrics/language_stats.svg"/>
+                <!-- <img src="https://github-readme-stats-sfqnzohy5-uday-shuklas-projects.vercel.app/api/top-langs/?username=udaysh134&theme=github_dark&layout=compact&langs_count=8&border_radius=15&border_color=0D1117&count_private=true"/> -->
             </td>
         </tr>
         <tr>
             <td align="center" colspan="2">
-                <img src="assets/wakatime_metrics.svg"/>
+                <img src="assets/metrics/wakatime_stats.svg"/>
             </td>
         </tr>
     </table>

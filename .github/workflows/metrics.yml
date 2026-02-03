@@ -1,4 +1,4 @@
-name: Metrics
+name: Update README Metrics
 
 on:
   schedule:
@@ -9,31 +9,62 @@ permissions:
   contents: write
 
 jobs:
-  # --------------------------------------------------
-  # 1. Wakatime Metrics
-  # --------------------------------------------------
-  wakatime:
+  generate-metrics:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Wakatime metrics
+      # --------------------------------------------------
+      # Checkout repo
+      # --------------------------------------------------
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # --------------------------------------------------
+      # 1. WakaTime Metrics
+      # --------------------------------------------------
+      - name: Generate WakaTime metrics
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           user: udaysh134
 
-          # Template & base
           template: classic
-          base: ""
+          base: metadata
 
           plugin_wakatime: yes
           plugin_wakatime_token: ${{ secrets.WAKATIME_API_KEY }}
+          plugin_wakatime_days: 30
           plugin_wakatime_limit: 5
-          plugin_wakatime_days: 365
           plugin_wakatime_languages_other: yes
           plugin_wakatime_repositories_visibility: all
-          plugin_wakatime_sections: time, projects, projects-graphs, languages, languages-graphs, editors, os
-          # plugin_wakatime_url: https://wakatime.com
-          # plugin_wakatime_user: current
+          plugin_wakatime_sections: time, projects, languages, editors, os
 
-          # Output
-          filename: assets/wakatime_metrics.svg
+          filename: assets/metrics/wakatime_stats.svg
+
+      # --------------------------------------------------
+      # 2. GRS – Profile
+      # --------------------------------------------------
+      - name: Fetch GitHub Readme Stats (profile)
+        run: |
+          mkdir -p assets/grs
+          curl -fsSL \
+            "https://github-readme-stats-sfqnzohy5-uday-shuklas-projects.vercel.app/api?username=udaysh134&theme=github_dark&show_icons=true&border_radius=15&border_color=0D1117&hide=contribs&include_all_commits=true&count_private=true" \
+            -o assets/metrics/profile_stats.svg
+
+      # --------------------------------------------------
+      # 3. GRS – Languages
+      # --------------------------------------------------
+      - name: Fetch GitHub Readme Stats (languages)
+        run: |
+          curl -fsSL \
+            "https://github-readme-stats-sfqnzohy5-uday-shuklas-projects.vercel.app/api/top-langs/?username=udaysh134&theme=github_dark&layout=compact&langs_count=8&border_radius=15&border_color=0D1117&count_private=true" \
+            -o assets/metrics/language_stats.svg
+
+      # --------------------------------------------------
+      # 4. Commit generated SVGs
+      # --------------------------------------------------
+      - name: Commit generated metrics
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore(metrics): update generated stats"
+          file_pattern: assets/**/*.svg
