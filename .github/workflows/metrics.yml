@@ -46,7 +46,7 @@ jobs:
       # --------------------------------------------------
       - name: Fetch GitHub Readme Stats (profile)
         run: |
-          mkdir -p assets/grs
+          mkdir -p assets/metrics
           curl -fsSL \
             "https://github-readme-stats-sfqnzohy5-uday-shuklas-projects.vercel.app/api?username=udaysh134&theme=github_dark&show_icons=true&border_radius=15&border_color=0D1117&hide=contribs&include_all_commits=true&count_private=true" \
             -o assets/metrics/profile_stats.svg
