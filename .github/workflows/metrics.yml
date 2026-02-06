@@ -61,12 +61,19 @@ jobs:
             -o assets/metrics/language_stats.svg
 
       # --------------------------------------------------
-      # 4. Commit generated SVGs
+      # 4. Sync with remote (CRITICAL)
+      # --------------------------------------------------
+      - name: Sync with remote
+        run: |
+          git config pull.rebase true
+          git pull origin main
+
+      # --------------------------------------------------
+      # 5. Commit generated SVGs
       # --------------------------------------------------
       - name: Commit generated metrics
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore(metrics): update generated stats"
           file_pattern: assets/**/*.svg
-          pull: true
           commit_options: --no-verify
