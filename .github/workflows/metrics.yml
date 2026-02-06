@@ -68,3 +68,5 @@ jobs:
         with:
           commit_message: "chore(metrics): update generated stats"
           file_pattern: assets/**/*.svg
+          pull: true
+          commit_options: --no-verify
