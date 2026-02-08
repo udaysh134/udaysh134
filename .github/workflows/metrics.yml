@@ -77,3 +77,4 @@ jobs:
           commit_message: "chore(metrics): update generated stats"
           file_pattern: assets/**/*.svg
           commit_options: --no-verify
+          push_options: --force-with-lease
