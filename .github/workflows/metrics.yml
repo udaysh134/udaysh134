@@ -14,21 +14,13 @@ jobs:
 
     steps:
       # --------------------------------------------------
-      # Checkout repo
+      # 1. Checkout repo
       # --------------------------------------------------
       - name: Checkout repository
         uses: actions/checkout@v4
 
       # --------------------------------------------------
-      # Sync with remote (CRITICAL)
-      # --------------------------------------------------
-      - name: Sync with remote
-        run: |
-          git config pull.rebase true
-          git pull origin main
-
-      # --------------------------------------------------
-      # 1. WakaTime Metrics
+      # 2. WakaTime Metrics
       # --------------------------------------------------
       - name: Generate WakaTime metrics
         uses: lowlighter/metrics@latest
@@ -50,7 +42,15 @@ jobs:
           filename: assets/metrics/wakatime_stats.svg
 
       # --------------------------------------------------
-      # 2. GRS – Profile
+      # 3. Sync with remote (CRITICAL)
+      # --------------------------------------------------
+      - name: Sync with remote
+        run: |
+          git config pull.rebase true
+          git pull origin main
+          
+      # --------------------------------------------------
+      # 4. GRS – Profile
       # --------------------------------------------------
       - name: Fetch GitHub Readme Stats (profile)
         run: |
@@ -60,7 +60,7 @@ jobs:
             -o assets/metrics/profile_stats.svg
 
       # --------------------------------------------------
-      # 3. GRS – Languages
+      # 5. GRS – Languages
       # --------------------------------------------------
       - name: Fetch GitHub Readme Stats (languages)
         run: |
@@ -69,7 +69,7 @@ jobs:
             -o assets/metrics/language_stats.svg
 
       # --------------------------------------------------
-      # Commit generated SVGs
+      # 6. Commit generated SVGs
       # --------------------------------------------------
       - name: Commit generated metrics
         uses: stefanzweifel/git-auto-commit-action@v5
