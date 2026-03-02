@@ -58,14 +58,6 @@ jobs:
           curl -fsSL \
             "https://github-readme-stats-b62j9ayvr-uday-shuklas-projects.vercel.app/api?username=udaysh134&theme=github_dark&show_icons=true&hide=contribs&include_all_commits=true&count_private=true&bg_color=00000000&hide_border=true" \
             -o assets/metrics/profile_stats.svg
-
-      # --------------------------------------------------
-      # 4.5. Modify Rank Badge (Replace C)
-      # --------------------------------------------------
-      - name: Replace rank letter in profile SVG
-        run: |
-          # Replace C with ★ (change symbol if you want)
-          sed -i -E 's/(data-testid="level-rank-icon">)[[:space:]]*[A-Z+]+[[:space:]]*(<\/text>)/\1★\2/' assets/metrics/profile_stats.svg
           
       # --------------------------------------------------
       # 5. GRS – Languages
@@ -76,8 +68,25 @@ jobs:
             "https://github-readme-stats-b62j9ayvr-uday-shuklas-projects.vercel.app/api/top-langs/?username=udaysh134&theme=github_dark&layout=compact&langs_count=8&count_private=true&bg_color=00000000&hide_border=true" \
             -o assets/metrics/language_stats.svg
 
+
       # --------------------------------------------------
-      # 6. Commit generated SVGs
+      # 6. Modify Rank Badge (Replace C)
+      # --------------------------------------------------
+      - name: Replace rank letter in profile SVG
+        run: |
+          # Replace C with ★ (change symbol if you want)
+          perl -0777 -pi -e 's/(data-testid="level-rank-icon">\s*)[A-Z+]+(\s*<\/text>)/${1}★${2}/g' assets/metrics/profile_stats.svg
+
+      # --------------------------------------------------
+      # 7. Modify Rank Badge (Replace C) In Title Rank : C
+      # --------------------------------------------------
+      - name: Replace rank in title
+        run: |
+          sed -i 's/Rank: [A-Z+]\+/Rank: ★/g' assets/metrics/profile_stats.svg
+      
+
+      # --------------------------------------------------
+      # 8. Commit generated SVGs
       # --------------------------------------------------
       - name: Commit generated metrics
         uses: stefanzweifel/git-auto-commit-action@v5
