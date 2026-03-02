@@ -60,6 +60,14 @@ jobs:
             -o assets/metrics/profile_stats.svg
 
       # --------------------------------------------------
+      # 4.5. Modify Rank Badge (Replace C)
+      # --------------------------------------------------
+      - name: Replace rank letter in profile SVG
+        run: |
+          # Replace C with ★ (change symbol if you want)
+          sed -i 's/>C</>★</g' assets/metrics/profile_stats.svg
+          
+      # --------------------------------------------------
       # 5. GRS – Languages
       # --------------------------------------------------
       - name: Fetch GitHub Readme Stats (languages)
